@@ -128,14 +128,21 @@ def options():
     else:
         print "Exiting the program"
         return
-        
 
+def mainLoop():
+    in_loop = True
+    while in_loop == True:
+        options()
+        again = raw_input("Do something else? (y/n)")
 
+        if again != 'y':
+            in_loop = False
 
 createTable()
 #newCharacter()
 #viewAll()
 #viewDetails()
 #deleteCharacter()
-options()
+#options()
+mainLoop()
 
